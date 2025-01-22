@@ -11,7 +11,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87CEED, #E0F6FF);
+    background: linear-gradient(#053d53, #22292b);
 }
 
 .pipe {
@@ -37,6 +37,47 @@
     animation: clouds-animation 20s infinite linear;
 }
 
+.serious {
+    position: absolute;
+    width: 200px;
+    animation: serious-animation 15s infinite linear;
+}
+
+.message {
+    position: absolute;
+    z-index: 10;
+    color: rgb(209, 24, 24);
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.messageStyle {
+    background: white;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 10vh;
+    font-weight: 100;
+    color: red;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
+.score_val {
+    color: gold;
+    font-weight: bold;
+}
 @keyframes pipe-animation {
     from {
         right: -80px;
@@ -77,5 +118,17 @@
 
     to {
         right: 100%;
+    }
+}
+
+@keyframes serious-animation {
+    from {
+        right: -550px;
+        bottom: 0;
+    }
+
+    to {
+        right: 100%;
+        bottom: 60%;
     }
 }
